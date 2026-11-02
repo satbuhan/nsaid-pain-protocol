@@ -251,3 +251,16 @@ const GLOSSARY = [
   { match: "VAS", full: "visual analogue scale", def: "A 100 mm line patients mark to rate pain intensity, from \"no pain\" to \"worst pain imaginable\". The standard continuous pain-intensity measure the between-drug effect sizes on this page are anchored to." },
   { match: "NRS", full: "numerical rating scale", def: "An 11-point (0–10) verbal or written pain-intensity scale, used interchangeably with the VAS in some of the trials behind this page. A fall of ≥1.3 points is treated as equivalent to a ≥10 mm VAS fall." }
 ];
+
+// Clinical agent (drug) names to visually emphasise wherever they appear —
+// in the diagram boxes themselves and in the readout panel's prose. This
+// is a rendering-only concern (app.js wraps each match in a styled span at
+// render time); it never touches label/sub, which stay byte-exact as
+// authored. Matching is case-insensitive and whole-word, longest name
+// first.
+// Added at Dr. Özgür Karcıoğlu's request, 2026-11-02 — see METHODOLOGY.md.
+const AGENTS = [
+  "Dexketoprofen",
+  "Ibuprofen",
+  "Paracetamol"
+];
